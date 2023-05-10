@@ -25,15 +25,9 @@ gallery.innerHTML = galleryItems.reduce((htmlGallery, item) => {
   );
 }, '');
 
-for (const li of gallery.children) {
-  li.querySelector('a').addEventListener('click', event =>
-    event.preventDefault()
-  );
-}
-
 function showLightbox(event) {
+  event.preventDefault();
   const { target } = event;
-  event.stopPropagation();
   if (target.nodeName !== 'IMG') return;
   instance.element().querySelector('img').src = target.dataset.source;
   instance.show();
