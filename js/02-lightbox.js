@@ -1,8 +1,8 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-const gallery = document.body.querySelector('.gallery');
-gallery.innerHTML = galleryItems.reduce((htmlGallery, item) => {
+const galleryEl = document.body.querySelector('.gallery');
+galleryEl.innerHTML = galleryItems.reduce((htmlGallery, item) => {
   return (
     htmlGallery +
     `
@@ -19,4 +19,4 @@ const lightbox = new SimpleLightbox(`.gallery a`, {
   captionsData: 'alt',
   captionDelay: 250,
 });
-console.log(gallery);
+console.log(galleryEl);

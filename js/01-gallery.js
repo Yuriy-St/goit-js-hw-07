@@ -6,8 +6,8 @@ const instance = basicLightbox.create(`<img src="" width="1280">`, {
 });
 
 // Change code below this line
-const gallery = document.body.querySelector('.gallery');
-gallery.innerHTML = galleryItems.reduce((htmlGallery, item) => {
+const galleryEl = document.body.querySelector('.gallery');
+galleryEl.innerHTML = galleryItems.reduce((htmlGallery, item) => {
   return (
     htmlGallery +
     `
@@ -48,4 +48,4 @@ function removeLightboxEscapeListener() {
   window.removeEventListener('keyup', onCloseLightbox);
 }
 
-gallery.addEventListener('click', showLightbox);
+galleryEl.addEventListener('click', showLightbox);
